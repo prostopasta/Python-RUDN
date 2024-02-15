@@ -6,6 +6,9 @@ def Fact(n):
   else:
     return n * Fact(n - 1)
 
+def my_Bernoulli(n, m, p):
+  return (Fact(n) / (Fact(n-m) * Fact(m))) * (p ** m) * ((1-p) ** (n - m))
+
 def Bernoulli(n, m, p):
   result = comb(n,m) * p ** m * (1-p) ** (n-m)
   # print (" - вероятность по формуле Бернулли=", result)
