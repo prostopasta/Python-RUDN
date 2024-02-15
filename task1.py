@@ -8,7 +8,7 @@ def Fact(n):
 
 def Bernoulli(n, m, p):
   result = comb(n,m) * p ** m * (1-p) ** (n-m)
-  print ("--вероятность по формуле Бернулли=", result)
+  # print (" - вероятность по формуле Бернулли=", result)
   return result
 
 p_ = 0.95 # p - вероятность что ручка исправная
@@ -20,7 +20,7 @@ while True :
   Psum = 0.0  # Psum - текушая вероятность вытащить m исправных ручек в n испытаниях
   for i in range(m, n+1):
     Psum += Bernoulli(n, i, p_)
-    print("- суммарная вероятность при m =", i, "равна =", Psum)
+    print(" > суммарная вероятность при m =", i, "равна =", Psum)
   if Psum >= Pmax:
     break
   n += 1
