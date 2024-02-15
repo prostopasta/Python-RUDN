@@ -22,6 +22,7 @@ while True :
   print("Испытание при n =", n)
   Psum = 0.0  # Psum - текушая вероятность вытащить m исправных ручек в n испытаниях
   for i in range(m, n+1):
+    # Psum += my_Bernoulli(n, i, p_)
     Psum += Bernoulli(n, i, p_)
     print(" > суммарная вероятность при m =", i, "равна =", Psum)
   if Psum >= Pmax:
